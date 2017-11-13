@@ -450,6 +450,6 @@ public class DraggableCardView: UIView, UIGestureRecognizerDelegate {
 
         // Ensure it's a horizontal drag
         let velocity = panRecognizer.velocity(in: self)
-        return fabs(velocity.y) > fabs(velocity.x)
+        return fabs(velocity.y) > fabs(velocity.x) && super.gestureRecognizerShouldBegin(gestureRecognizer)
     }
 }
